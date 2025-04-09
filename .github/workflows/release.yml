@@ -38,7 +38,7 @@ jobs:
       - name: Get latest release
         id: get_latest_release
         run: |
-          $release = (Invoke-RestMethod -Uri "https://api.github.com/repos/${{ env.ZED_REPO }}/releases/latest")
+          $release = (Invoke-RestMethod -Uri "https://api.github.com/repos/zed-industries/zed/releases/latest")
           $tag = $release.tag_name
           echo "LATEST_TAG=$tag" >> $env:GITHUB_OUTPUT
 
